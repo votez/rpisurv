@@ -63,16 +63,12 @@ def calcDiff(original, test):
         (x, y, w, h) = cv2.boundingRect(c)
         (xs,ys,ws,hs) = (int(x*scale), int(y*scale), int(w * scale), int(h * scale))
 #        cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
-        cv2.putText(test,str(cv2.contourArea(c)),org=(xs,ys),fontFace=cv2.FONT_HERSHEY_PLAIN)
+        cv2.putText(test,str(cv2.contourArea(c)),org=(xs,ys),fontFace=cv2.FONT_HERSHEY_PLAIN,color=(255,255,255))
         cv2.rectangle(test, (xs, ys), (xs + ws, ys + hs), (0, 255, 0), 2)
     return diff
 
 
 def main():
-    """Shows basic usage of the Drive v3 API.
-    Prints the names and ids of the first 10 files the user has access to.
-    """
-#    print("Started")
     creds = None
     # The file token.json stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
@@ -84,8 +80,8 @@ def main():
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
-#            print("Credentials not valid")
-#            exit(-5)
+            print("Credentials not valid")
+            exit(-5)
             flow = InstalledAppFlow.from_client_secrets_file(
                 'credentials.json', SCOPES)
             creds = flow.run_local_server(port=0)
@@ -99,8 +95,8 @@ def main():
     timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
     with PiCamera() as camera:
 # Original 2592, 1944
-        camera.resolution = (2592, 1944)  
-#        camera.resolution = (1280, 720)
+#        camera.resolution = (2592, 1944)  
+        camera.resolution = (1280, 720)
         camera.annotate_text = timestamp
         camera.annotate_background = Blue
         camera.rotation = 180
@@ -118,7 +114,7 @@ def main():
         print("Changes detected")
         cv2.imwrite('/home/pi/Pictures/contour.jpg',test)
         file_metadata = {
-            'name': datetime.now().strftime("%Y%m%d-%H%M%S.jpg"),
+            'name': datetime.now().strftime("gost_%Y%m%d-%H%M.jpg"),
             'parents': [changesFolder]
         }
         media = MediaFileUpload('/home/pi/Pictures/contour.jpg',
@@ -134,7 +130,7 @@ def main():
     img.save('/home/pi/Pictures/scaled.jpg')
 
     file_metadata = {
-        'name': datetime.now().strftime("%Y%m%d-%H%M%S.jpg"),
+        'name': datetime.now().strftime("gost_%Y%m%d-%H%M.jpg"),
         'parents': [rpiFolder]
     }
     media = MediaFileUpload('/home/pi/Pictures/scaled.jpg',
