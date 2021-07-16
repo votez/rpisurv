@@ -114,7 +114,7 @@ def main():
         print("Changes detected")
         cv2.imwrite('/home/pi/Pictures/contour.jpg',test)
         file_metadata = {
-            'name': datetime.now().strftime("gost_%Y%m%d-%H%M.jpg"),
+            'name': datetime.now().strftime("contour_%Y%m%d-%H%M.jpg"),
             'parents': [changesFolder]
         }
         media = MediaFileUpload('/home/pi/Pictures/contour.jpg',
@@ -123,6 +123,17 @@ def main():
         service.files().create(body=file_metadata,
                                         media_body=media,
                                         fields='id').execute()
+        file_metadata = {
+            'name': datetime.now().strftime("%Y%m%d-%H%M.jpg"),
+            'parents': [changesFolder]
+        }
+        media = MediaFileUpload('/home/pi/Pictures/image.jpg',
+                            mimetype='image/jpeg',
+                            resumable=False)
+        service.files().create(body=file_metadata,
+                                        media_body=media,
+                                        fields='id').execute()
+
     img = Image.open('/home/pi/Pictures/image.jpg')
     new_width  = 560
     new_height = 420
