@@ -16,7 +16,7 @@ import cv2
 from PIL import Image
 
 from picamera import PiCamera
-from picamera import Blue
+from picamera.color import Color
 from time import sleep
 from datetime import datetime
 from apiclient.http import MediaFileUpload
@@ -28,6 +28,7 @@ THRESHOLD = 150
 #changesFolder = '1B4ZgTFazv5My3gSWAsjYg0dlLjaqy12a'
 changesFolder = '1tFNJX8-JuZqFQyKWkD_nfzW7c1RKNi-v'
 rpiFolder = '1RoB8bBSurOYf23zFTjA92VWDGOB_rwBj'
+debugFolder = '1eNIxIXKW0SpvprChaOO4boodHahsnaiE'
 
 def calcDiff(original, test):
     height, width, _ = original.shape
@@ -63,7 +64,7 @@ def calcDiff(original, test):
         (x, y, w, h) = cv2.boundingRect(c)
         (xs,ys,ws,hs) = (int(x*scale), int(y*scale), int(w * scale), int(h * scale))
 #        cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
-        cv2.putText(test,str(cv2.contourArea(c)),org=(xs,ys),fontFace=cv2.FONT_HERSHEY_PLAIN,color=(255,255,255))
+        cv2.putText(test,str(cv2.contourArea(c)),org=(xs,ys),fontFace=cv2.FONT_HERSHEY_PLAIN,color=(255,255,255), fontScale=1)
         cv2.rectangle(test, (xs, ys), (xs + ws, ys + hs), (0, 255, 0), 2)
     return diff
 
@@ -98,53 +99,55 @@ def main():
 #        camera.resolution = (2592, 1944)  
         camera.resolution = (1280, 720)
         camera.annotate_text = timestamp
-        camera.annotate_background = Blue
+        camera.annotate_background = Color('blue')
         camera.rotation = 180
         sleep(5)
-        camera.capture('/home/pi/Pictures/image.jpg')
+        camera.capture('/var/lib/ramdisk/image.jpg')
     
 
-    test = cv2.imread('/home/pi/Pictures/image.jpg', cv2.IMREAD_COLOR)
-    original = cv2.imread('/home/pi/Pictures/previous.jpg', cv2.IMREAD_COLOR)
+    test = cv2.imread('/var/lib/ramdisk/image.jpg', cv2.IMREAD_COLOR)
+    original = cv2.imread('/var/lib/ramdisk/previous.jpg', cv2.IMREAD_COLOR)
 
     if original is None:
         original = numpy.zeros((720,1280,3), numpy.uint8)
 
     if calcDiff(original, test) > THRESHOLD:
         print("Changes detected")
-        cv2.imwrite('/home/pi/Pictures/contour.jpg',test)
+        cv2.imwrite('/var/lib/ramdisk/contour.jpg',test)
         file_metadata = {
             'name': datetime.now().strftime("contour_%Y%m%d-%H%M.jpg"),
-            'parents': [changesFolder]
+            'parents': [debugFolder]
         }
-        media = MediaFileUpload('/home/pi/Pictures/contour.jpg',
+        media = MediaFileUpload('/var/lib/ramdisk/contour.jpg',
                             mimetype='image/jpeg',
                             resumable=False)
-        service.files().create(body=file_metadata,
+        file = service.files().create(body=file_metadata,
                                         media_body=media,
                                         fields='id').execute()
+        print(f"Uploaded debug {file}")
         file_metadata = {
             'name': datetime.now().strftime("%Y%m%d-%H%M.jpg"),
             'parents': [changesFolder]
         }
-        media = MediaFileUpload('/home/pi/Pictures/image.jpg',
+        media = MediaFileUpload('/var/lib/ramdisk/image.jpg',
                             mimetype='image/jpeg',
                             resumable=False)
-        service.files().create(body=file_metadata,
+        file = service.files().create(body=file_metadata,
                                         media_body=media,
                                         fields='id').execute()
+        print(f"Uploaded original {file}")
 
-    img = Image.open('/home/pi/Pictures/image.jpg')
+    img = Image.open('/var/lib/ramdisk/image.jpg')
     new_width  = 560
     new_height = 420
     img = img.resize((new_width, new_height), Image.ANTIALIAS)
-    img.save('/home/pi/Pictures/scaled.jpg')
+    img.save('/var/lib/ramdisk/scaled.jpg')
 
     file_metadata = {
-        'name': datetime.now().strftime("gost_%Y%m%d-%H%M.jpg"),
+        'name': datetime.now().strftime("komnata_%Y%m%d-%H%M.jpg"),
         'parents': [rpiFolder]
     }
-    media = MediaFileUpload('/home/pi/Pictures/scaled.jpg',
+    media = MediaFileUpload('/var/lib/ramdisk/scaled.jpg',
                         mimetype='image/jpeg',
 
                          resumable=False)
@@ -152,7 +155,7 @@ def main():
                                     media_body=media,
                                     fields='id').execute()
 
-    os.rename(r'/home/pi/Pictures/image.jpg',r'/home/pi/Pictures/previous.jpg')
+    os.rename(r'/var/lib/ramdisk/image.jpg',r'/var/lib/ramdisk/previous.jpg')
 
 if __name__ == '__main__':
     main()
