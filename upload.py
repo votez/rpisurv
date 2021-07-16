@@ -138,7 +138,7 @@ def main():
         print(f"Uploaded original {file}")
 
     img = Image.open('/var/lib/ramdisk/image.jpg')
-    new_width  = 560
+    new_width  = 746
     new_height = 420
     img = img.resize((new_width, new_height), Image.ANTIALIAS)
     img.save('/var/lib/ramdisk/scaled.jpg')
