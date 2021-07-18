@@ -145,7 +145,7 @@ def main():
                                         fields='id').execute()
         print(f"Uploaded original {file}")
 
-    img = Image.open('/var/lib/ramdisk/image.jpg')
+    img = cv2.imread('/var/lib/ramdisk/image.jpg')
     img = imutils.resize(img, width=SCALE)
     img.save('/var/lib/ramdisk/scaled.jpg')
 
