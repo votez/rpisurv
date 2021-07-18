@@ -23,7 +23,10 @@ from apiclient.http import MediaFileUpload
 
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/drive']
-THRESHOLD = 900
+CONTOUR_THRESHOLD = 900
+AREA_THRESHOLD = 20000
+MIN_AREA = 150
+SCALE=720
 #rpiFolder = '1bMnujx42DmxmhT2U-cXjuSijkvqLSxde'
 #changesFolder = '1B4ZgTFazv5My3gSWAsjYg0dlLjaqy12a'
 changesFolder = '1tFNJX8-JuZqFQyKWkD_nfzW7c1RKNi-v'
@@ -57,6 +60,8 @@ def calcDiff(original, test):
     # loop over the contours
     for c in cnts:
         # if the contour is too small, ignore it
+        if( cv2.contourArea(c) < MIN_AREA):
+            continue
         if cv2.contourArea(c) > diff:
             diff = cv2.contourArea(c)
     	# compute the bounding box for the contour, draw it on the frame,
@@ -66,7 +71,10 @@ def calcDiff(original, test):
 #        cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
         cv2.putText(test,str(cv2.contourArea(c)),org=(xs,ys),fontFace=cv2.FONT_HERSHEY_PLAIN,color=(255,255,255), fontScale=1)
         cv2.rectangle(test, (xs, ys), (xs + ws, ys + hs), (0, 255, 0), 2)
-    return diff
+    
+    cv2.putText(test,f"Area {str(sum(sum(thresh)))}",org=(20,20),fontFace=cv2.FONT_HERSHEY_PLAIN,color=(255,0,0), fontScale=1)
+    cv2.putText(test,f"Contour: {diff}",org=(200,20),fontFace=cv2.FONT_HERSHEY_PLAIN,color=(255,0,0), fontScale=1)
+    return diff > CONTOUR_THRESHOLD or sum(sum(thresh)) > AREA_THRESHOLD
 
 
 def main():
@@ -111,7 +119,7 @@ def main():
     if original is None:
         original = numpy.zeros((720,1280,3), numpy.uint8)
 
-    if calcDiff(original, test) > THRESHOLD:
+    if calcDiff(original, test):
         print("Changes detected")
         cv2.imwrite('/var/lib/ramdisk/contour.jpg',test)
         file_metadata = {
@@ -138,9 +146,7 @@ def main():
         print(f"Uploaded original {file}")
 
     img = Image.open('/var/lib/ramdisk/image.jpg')
-    new_width  = 746
-    new_height = 420
-    img = img.resize((new_width, new_height), Image.ANTIALIAS)
+    img = imutils.resize(img, width=SCALE)
     img.save('/var/lib/ramdisk/scaled.jpg')
 
     file_metadata = {
@@ -154,6 +160,20 @@ def main():
     service.files().create(body=file_metadata,
                                     media_body=media,
                                     fields='id').execute()
+    
+    test = imutils.resize(test, width=SCALE)
+    cv2.imwrite('/var/lib/ramdisk/small_contour.jpg',test)
+    file_metadata = {
+        'name': datetime.now().strftime("small_contour_%Y%m%d-%H%M.jpg"),
+        'parents': [rpiFolder]
+    }
+    media = MediaFileUpload('/var/lib/ramdisk/small_contour.jpg',
+                        mimetype='image/jpeg',
+                        resumable=False)
+    file = service.files().create(body=file_metadata,
+                                    media_body=media,
+                                    fields='id').execute()
+    print(f"Uploaded small debug {file}")
 
     os.rename(r'/var/lib/ramdisk/image.jpg',r'/var/lib/ramdisk/previous.jpg')
 
