@@ -23,7 +23,7 @@ from apiclient.http import MediaFileUpload
 
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/drive']
-THRESHOLD = 150
+THRESHOLD = 900
 #rpiFolder = '1bMnujx42DmxmhT2U-cXjuSijkvqLSxde'
 #changesFolder = '1B4ZgTFazv5My3gSWAsjYg0dlLjaqy12a'
 changesFolder = '1tFNJX8-JuZqFQyKWkD_nfzW7c1RKNi-v'
