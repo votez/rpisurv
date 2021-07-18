@@ -72,8 +72,8 @@ def calcDiff(original, test):
         cv2.putText(test,str(cv2.contourArea(c)),org=(xs,ys),fontFace=cv2.FONT_HERSHEY_PLAIN,color=(255,255,255), fontScale=1)
         cv2.rectangle(test, (xs, ys), (xs + ws, ys + hs), (0, 255, 0), 2)
     
-    cv2.putText(test,f"Area {str(sum(sum(thresh)))}",org=(20,20),fontFace=cv2.FONT_HERSHEY_PLAIN,color=(0,255,0), fontScale=1)
-    cv2.putText(test,f"Contour: {diff}",org=(200,20),fontFace=cv2.FONT_HERSHEY_PLAIN,color=(0,255,100), fontScale=1)
+    cv2.putText(test,f"Area {str(sum(sum(thresh)))}",org=(1000,20),fontFace=cv2.FONT_HERSHEY_PLAIN,color=(0,0,255), fontScale=1.5)
+    cv2.putText(test,f"Contour: {diff}",org=(1000,45),fontFace=cv2.FONT_HERSHEY_PLAIN,color=(0,0,255), fontScale=1.5)
     return diff > CONTOUR_THRESHOLD or sum(sum(thresh)) > AREA_THRESHOLD
 
 
