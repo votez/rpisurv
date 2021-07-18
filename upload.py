@@ -147,7 +147,7 @@ def main():
 
     img = cv2.imread('/var/lib/ramdisk/image.jpg')
     img = imutils.resize(img, width=SCALE)
-    img.save('/var/lib/ramdisk/scaled.jpg')
+    cv2.imwrite('/var/lib/ramdisk/scaled.jpg', img)
 
     file_metadata = {
         'name': datetime.now().strftime("komnata_%Y%m%d-%H%M.jpg"),
