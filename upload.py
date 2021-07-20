@@ -12,6 +12,7 @@ import base64
 import imutils
 import time
 import cv2
+import argparse
 
 from PIL import Image
 
@@ -23,8 +24,6 @@ from apiclient.http import MediaFileUpload
 
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/drive']
-CONTOUR_THRESHOLD = 900
-AREA_THRESHOLD = 20000
 MIN_AREA = 150
 SCALE=720
 #rpiFolder = '1bMnujx42DmxmhT2U-cXjuSijkvqLSxde'
@@ -33,19 +32,25 @@ changesFolder = '1tFNJX8-JuZqFQyKWkD_nfzW7c1RKNi-v'
 rpiFolder = '1RoB8bBSurOYf23zFTjA92VWDGOB_rwBj'
 debugFolder = '1eNIxIXKW0SpvprChaOO4boodHahsnaiE'
 
-def calcDiff(original, test):
+def calcDiff(original, test, area_threshold, contour_threshold, top, bottom, left, right):
     height, width, _ = original.shape
     scaled = 500
     half=scaled/2
     scale = width / scaled
     # initialize the first frame in the video stream
     firstFrame = imutils.resize(original, width=scaled)
-    firstFrame[:150,:] = [0,0,0]
+    firstFrame[:top,:] = [0,0,0]
+    firstFrame[bottom:,:] = [0,0,0]
+    firstFrame[:,:left] = [0,0,0]
+    firstFrame[:,right:] = [0,0,0]
     firstFrame = cv2.cvtColor(firstFrame, cv2.COLOR_BGR2GRAY)
     firstFrame = cv2.GaussianBlur(firstFrame, (21, 21), 0)
     # loop over the frames of the video
     frame = imutils.resize(test, width=scaled)
-    frame[:150,:] = [0,0,0]
+    frame[:top,:] = [0,0,0]
+    frame[bottom:,:] = [0,0,0]
+    frame[:,:left] = [0,0,0]
+    frame[:,right:] = [0,0,0]
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     gray = cv2.GaussianBlur(gray, (21, 21), 0)
     frameDelta = cv2.absdiff(firstFrame, gray)
@@ -71,13 +76,24 @@ def calcDiff(original, test):
 #        cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
         cv2.putText(test,str(cv2.contourArea(c)),org=(xs,ys),fontFace=cv2.FONT_HERSHEY_PLAIN,color=(255,255,255), fontScale=1)
         cv2.rectangle(test, (xs, ys), (xs + ws, ys + hs), (0, 255, 0), 2)
+        cv2.rectangle(test, (int(left*scale), int(top*scale)), (int(right*scale), int(bottom*scale)), (255, 0, 0), 1)
     
     cv2.putText(test,f"Area {str(sum(sum(thresh)))}",org=(900,20),fontFace=cv2.FONT_HERSHEY_PLAIN,color=(0,100,255), fontScale=1.5)
     cv2.putText(test,f"Contour: {diff}",org=(900,45),fontFace=cv2.FONT_HERSHEY_PLAIN,color=(0,100,255), fontScale=1.5)
-    return diff > CONTOUR_THRESHOLD or sum(sum(thresh)) > AREA_THRESHOLD
+    return diff > contour_threshold or sum(sum(thresh)) > area_threshold
 
 
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("-f", "--force", type=bool, default=False, help="force full scale upload")
+    ap.add_argument("-a", "--area", type=int, default=900, help="minimum area to consider")
+    ap.add_argument("-l", "--left", type=int, default=0, help="cut from left")
+    ap.add_argument("-r", "--right", type=int, default=500,help="cut from right")
+    ap.add_argument("-t", "--top", type=int, default=150,help="cut from top")
+    ap.add_argument("-b", "--bottom", type=int, default=281,help="cut from bottom")
+    ap.add_argument("-c", "--contour", type=int, default=500, help="minimum contour size")
+    args = vars(ap.parse_args())
+
     creds = None
     # The file token.json stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
@@ -119,7 +135,11 @@ def main():
     if original is None:
         original = numpy.zeros((720,1280,3), numpy.uint8)
 
-    if calcDiff(original, test):
+    isDifferent = calcDiff(original, test,
+        area_threshold=args.get("area"), contour_threshold=args.get("contour"), 
+        top = args.get("top"), bottom=args.get("bottom"), left = args.get("left"), right = args.get("right"))
+
+    if isDifferent or args.get("force"):
         print("Changes detected")
         cv2.imwrite('/var/lib/ramdisk/contour.jpg',test)
         file_metadata = {
