@@ -125,10 +125,10 @@ def main():
         camera.annotate_background = Color('blue')
         camera.rotation = 180
         sleep(5)
-        camera.capture('/var/lib/ramdisk/image.jpg')
+        camera.capture('/var/ramdisk/image.jpg')
 
-    test = cv2.imread('/var/lib/ramdisk/image.jpg', cv2.IMREAD_COLOR)
-    original = cv2.imread('/var/lib/ramdisk/previous.jpg', cv2.IMREAD_COLOR)
+    test = cv2.imread('/var/ramdisk/image.jpg', cv2.IMREAD_COLOR)
+    original = cv2.imread('/var/ramdisk/previous.jpg', cv2.IMREAD_COLOR)
 
     if original is None:
         original = numpy.zeros((720, 1280, 3), numpy.uint8)
@@ -140,12 +140,12 @@ def main():
 
     if is_different or args.get("force"):
         print("Changes detected")
-        cv2.imwrite('/var/lib/ramdisk/contour.jpg', test)
+        cv2.imwrite('/var/ramdisk/contour.jpg', test)
         file_metadata = {
             'name': datetime.now().strftime("contour_%Y%m%d-%H%M.jpg"),
             'parents': [debugFolder]
         }
-        media = MediaFileUpload('/var/lib/ramdisk/contour.jpg',
+        media = MediaFileUpload('/var/ramdisk/contour.jpg',
                                 mimetype='image/jpeg',
                                 resumable=False)
         file = service.files().create(body=file_metadata,
@@ -156,7 +156,7 @@ def main():
             'name': datetime.now().strftime("%Y%m%d-%H%M.jpg"),
             'parents': [changesFolder]
         }
-        media = MediaFileUpload('/var/lib/ramdisk/image.jpg',
+        media = MediaFileUpload('/var/ramdisk/image.jpg',
                                 mimetype='image/jpeg',
                                 resumable=False)
         file = service.files().create(body=file_metadata,
@@ -164,15 +164,15 @@ def main():
                                       fields='id').execute()
         print(f"Uploaded original {file}")
 
-    img = cv2.imread('/var/lib/ramdisk/image.jpg')
+    img = cv2.imread('/var/ramdisk/image.jpg')
     img = imutils.resize(img, width=SCALE)
-    cv2.imwrite('/var/lib/ramdisk/scaled.jpg', img)
+    cv2.imwrite('/var/ramdisk/scaled.jpg', img)
 
     file_metadata = {
         'name': datetime.now().strftime("komnata_%Y%m%d-%H%M.jpg"),
         'parents': [rpiFolder]
     }
-    media = MediaFileUpload('/var/lib/ramdisk/scaled.jpg',
+    media = MediaFileUpload('/var/ramdisk/scaled.jpg',
                             mimetype='image/jpeg',
 
                             resumable=False)
@@ -181,12 +181,12 @@ def main():
                            fields='id').execute()
 
     test = imutils.resize(test, width=SCALE)
-    cv2.imwrite('/var/lib/ramdisk/small_contour.jpg', test)
+    cv2.imwrite('/var/ramdisk/small_contour.jpg', test)
     file_metadata = {
         'name': datetime.now().strftime("small_contour_%Y%m%d-%H%M.jpg"),
         'parents': [rpiFolder]
     }
-    media = MediaFileUpload('/var/lib/ramdisk/small_contour.jpg',
+    media = MediaFileUpload('/var/ramdisk/small_contour.jpg',
                             mimetype='image/jpeg',
                             resumable=False)
     file = service.files().create(body=file_metadata,
@@ -194,7 +194,7 @@ def main():
                                   fields='id').execute()
     print(f"Uploaded small debug {file}")
 
-    os.rename(r'/var/lib/ramdisk/image.jpg', r'/var/lib/ramdisk/previous.jpg')
+    os.rename(r'/var/ramdisk/image.jpg', r'/var/ramdisk/previous.jpg')
 
 
 if __name__ == '__main__':
