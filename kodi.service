@@ -1,0 +1,16 @@
+[Unit]
+Description=Kodi startup
+StartLimitIntervalSec=0
+After = network-online.target
+Wants = network-online.target
+
+[Service]
+Type=simple
+Restart=on-abort
+RestartSec=10
+User=pi
+Group=pi
+ExecStart=/usr/bin/kodi-standalone
+
+[Install]
+WantedBy=multi-user.target
