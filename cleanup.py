@@ -55,27 +55,35 @@ def main():
 
     source = args.get("source")
     destination = args.get("destination")
-    results = service.files().list(q=f"parents in '{source}'", pageSize=10,
+    source_folder = service.files().get(fileId=source).execute()
+    source_folder_name = source_folder['name']
+    print(f"Source directory {source_folder_name}")
+    results = service.files().list(q=f"parents in '{source}'  and trashed = false", pageSize=10,
                                    fields="nextPageToken, files(id, name)").execute()
-    if (args.get("clear") and len(results.get('files', None)) == 0):
+    if args.get("clear") and len(results.get('files', None)) == 0:
         print("No data in current folder, skip delete")
         return
 
     counter = 0
     page_token = None
+    destination_folder = service.files().get(fileId=destination).execute()
+    destination_folder_name = destination_folder['name']
     if args.get("clear"):
+        print(f"Destination directory {destination_folder_name}")
         while True:
             print("Starting batch delete")
-            results = service.files().list(q=f"parents in '{destination}'", pageToken=page_token, pageSize=100,
+            results = service.files().list(q=f"parents in '{destination}'  and trashed = false", pageToken=page_token, pageSize=100,
                                            fields="nextPageToken, files(id, name)").execute()
             files = results.get('files', [])
-            print(f"Removing {len(files)} items from {destination}")
+            print(f"Removing {len(files)} items from {destination_folder_name}")
             for item in files:
                 file_id = item["id"]
+                file_name = item["name"]
                 if not args.get("dry"):
+                    print(f"  delete {file_name} {file_id}")
                     service.files().delete(fileId=file_id).execute()
                 else:
-                    print(f"  simulate delete {file_id}")
+                    print(f"  simulate delete {file_name} {file_id}")
             page_token = results.get('nextPageToken', None)
             counter = counter + len(results.get('files', []))
             if page_token is None:
@@ -89,21 +97,23 @@ def main():
     counter = 0
     while True:
         print("Starting batch move")
-        results = service.files().list(q=f"parents in '{source}'", pageToken=page_token, pageSize=100,
+        results = service.files().list(q=f"parents in '{source}'  and trashed = false", pageToken=page_token, pageSize=100,
                                        fields="nextPageToken, files(id, name)").execute()
         files = results.get('files', [])
-        print(f"Moving {len(files)} items from {source} to {destination}")
+        print(f"Moving {len(files)} items from {source_folder_name} to {destination_folder_name}")
         for item in results.get('files', []):
             file_id = item["id"]
+            file_name = item["name"]
             if not args.get("dry"):
+                print(f"   move {file_name} {file_id}")
                 service.files().update(fileId=file_id, removeParents=source, addParents=destination).execute()
             else :
-                print(f"   simulate move {file_id}")
+                print(f"   simulate move {file_name} {file_id}")
         counter = counter + len(results.get('files', []))
         page_token = results.get('nextPageToken', None)
         if page_token is None:
             break
-    print(f"Moved {counter} items from {source} to {destination}")
+    print(f"Moved {counter} items from {source_folder_name} to {destination_folder_name}")
 
 
 if __name__ == '__main__':
