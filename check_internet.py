@@ -5,15 +5,11 @@ from time import sleep
 
 
 def no_internet(led_pin):
-    led_pin.on()
-    sleep(1)
-    led_pin.off()
-    sleep(1)
-    led_pin.on()
-    sleep(1)
-    led_pin.off()
-    sleep(1)
-    led_pin.on()
+    for i in range(10):
+        led_pin.on()
+        sleep(1)
+        led_pin.off()
+        sleep(1)
 
 
 def internet(led_pin):
