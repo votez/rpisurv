@@ -22,11 +22,15 @@ def internet(led_pin):
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
-    ap.add_argument("-p", "--pin", default="17", type=int, help="PIN number as gpiozero")
+    ap.add_argument("-p", "--pin", default="14", type=int, help="PIN number as gpiozero")
+    ap.add_argument("-pb", "--blue", default="15", type=int, help="Blue pin")
+    ap.add_argument("-pg", "--green", default="18", type=int, help="Green pin")
     ap.add_argument("-i", "--host", default="unix.stackexchange.com", type=str, help="host to resolve")
     ap.add_argument("-l", "--local", default="192.", type=str, help="local network first byte of IPv4")
     args = vars(ap.parse_args())
     led = LED(args.get("pin"))
+    blue = LED(args.get("blue"))
+    green = LED(args.get("green"))
     host = args.get("host")
     local = args.get("local")
     try:
