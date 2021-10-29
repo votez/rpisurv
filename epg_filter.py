@@ -36,7 +36,8 @@ if __name__ == '__main__':
     for program in programs:
         channel = program.get('channel')
         curr = count.get(channel, 0)
-        if channel in visible_channels and program.get('start').startswith(today):
+        # if channel in visible_channels and program.get('start').startswith(today):
+        if program.get('start').startswith(today):
             count[channel] = curr + 1
             newTree.append(program)
 
