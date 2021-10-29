@@ -2,7 +2,10 @@ import cv2
 
 if __name__ == '__main__':
     # -----Reading the image-----------------------------------------------------
-    img = cv2.imread('/home/votez/opt/pivideo/training/komnata_20211003-0835.jpg', 1)
+    img = cv2.imread('/home/votez/opt/pivideo/training/komnata_20211005-1820.jpg', 1)
+
+    print(cv2.calcHist(img, [0], None, [4], [0, 16]))
+
     # cv2.imshow("img", img)
 
     # -----Converting image to LAB Color model-----------------------------------
