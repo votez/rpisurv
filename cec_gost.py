@@ -1,8 +1,13 @@
+#!/usr/bin/python
+
 import cec
 
 if __name__ == '__main__':
     cec.init()
     devices = cec.list_devices()
+    for (key, device) in devices.items() :
+        print('Device {} osd {}'.format(key, device.osd_string))
+    
     if devices[0].is_on():
         print('Turn off')
         devices[0].standby()

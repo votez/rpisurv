@@ -43,16 +43,16 @@
 							<aspectratio align="right">keep</aspectratio>
 							<texture>$INFO[listitem.icon]</texture>
 						</control>
-						<!--control type="progress">
-							<left>105</left>
+						<control type="progress">
+							<right>315</right>
 							<top>58</top>
-							<width>50</width>
-							<height>12</height>
+							<width>150</width>
+							<height>50</height>
 							<midtexture border="3">progress/texturebg_white.png</midtexture>
 							<visible>ListItem.HasEpg</visible>
 							<info>ListItem.Progress</info>
 						</control>
-						<control type="image">
+						<!--control type="image">
 							<right>110</right>
 							<top>25</top>
 							<width>40</width>
@@ -60,25 +60,25 @@
 							<texture>$VAR[PVRStatusImageVar]</texture>
 						</control-->
 						<control type="label">
-							<left>105</left>
+							<left>135</left>
 							<top>8</top>
 							<height>180</height>
 							<right>120</right>
 							<aligny>top</aligny>
 							<!--font>font14</font-->
-							<font>font80</font>
+							<font>font120</font>
 							<animation effect="slide" start="0,0" end="0,14" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
 							<label>$INFO[ListItem.Label]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 						<control type="label">
 							<left>165</left>
-							<top>8</top>
-							<height>180</height>
+							<bottom>10</bottom>
+							<height>50</height>
 							<right>120</right>
 							<aligny>top</aligny>
 							<!--font>font12</font-->
-							<font>font80</font>
+							<font>font45</font>
 							<label>$INFO[ListItem.Title]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
@@ -86,10 +86,10 @@
 							<left>10</left>
 							<top>0</top>
 							<height>190</height>
-							<width>82</width>
+							<width>110</width>
 							<align>center</align>
 							<aligny>center</aligny>
-							<font>font52_title</font>
+							<font>font80_title</font>
 							<label>$INFO[ListItem.ChannelNumberLabel]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
@@ -103,16 +103,16 @@
 							<aspectratio align="right">keep</aspectratio>
 							<texture>$INFO[listitem.icon]</texture>
 						</control>
-						<!--control type="progress">
-							<left>105</left>
+						<control type="progress">
+							<right>315</right>
 							<top>58</top>
-							<width>50</width>
-							<height>12</height>
+							<width>150</width>
+							<height>50</height>
 							<colordiffuse>88FFFFFF</colordiffuse>
 							<visible>ListItem.HasEpg</visible>
 							<info>ListItem.Progress</info>
 						</control>
-						<control type="image">
+						<!--control type="image">
 							<right>110</right>
 							<top>25</top>
 							<width>40</width>
@@ -120,24 +120,24 @@
 							<texture>$VAR[PVRStatusImageVar]</texture>
 						</control-->
 						<control type="label">
-							<left>105</left>
+							<left>135</left>
 							<top>8</top>
 							<height>190</height>
 							<right>120</right>
 							<aligny>top</aligny>
 							<!--font>font14</font-->
-							<font>font80</font>
+							<font>font120</font>
 							<label>$INFO[ListItem.Label]</label>
 							<animation effect="slide" start="0,0" end="0,14" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 						<control type="label">
 							<left>165</left>
-							<top>46</top>
-							<height>190</height>
+							<bottom>10</bottom>
+							<height>50</height>
 							<right>120</right>
-							<aligny>top</aligny>
-							<font>font80</font>
+							<aligny>bottom</aligny>
+							<font>font45</font>
 							<label>$INFO[ListItem.Title]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 							<textcolor>grey</textcolor>
@@ -146,10 +146,10 @@
 							<left>10</left>
 							<top>0</top>
 							<height>190</height>
-							<width>82</width>
+							<width>110</width>
 							<align>center</align>
 							<aligny>center</aligny>
-							<font>font52_title</font>
+							<font>font80_title</font>
 							<label>$INFO[ListItem.ChannelNumberLabel]</label>
 							<textcolor>grey</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
@@ -218,11 +218,11 @@
 						</control>
 						<control type="label">
 							<left>10</left>
-							<top>0</top>
+							<top>100</top>
 							<bottom>0</bottom>
 							<width>82</width>
 							<align>center</align>
-							<aligny>center</aligny>
+							<aligny>top</aligny>
 							<font>font52_title</font>
 							<label>$INFO[ListItem.ChannelNumberLabel]</label>
 							<shadowcolor>text_shadow</shadowcolor>

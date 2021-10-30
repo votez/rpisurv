@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keymap>
+  <global>
+	<keyboard>
+		<home>ActivateWindow(FullScreenVideo)</home>
+		<key id="61622">activatewindow(fullscreenvideo)</key>
+		<key id="0xf0d8">activatewindow(tvchannels)</key>
+		<menu>ActivateWindow(TvChannels)</menu>
+		<!--sleep>CECActivateSource</sleep-->
+		<!--sleep>RunScript(/home/pi/opt/rpisurv/cec_gost.py)</key-->
+	<key id="61663" >System.Exec(/home/pi/opt/rpisurv/cec_gost.py)</key>
+		<!--key id="61663" mod="longpress">System.Exec('echo "standby 0" | cec-client -s -d 1')</key-->
+		<!--key id="61663">CECActivateSource</key-->
+		<!--key id="61663">CECToggleState</key-->
+		<!--key id="61663">RunScript(/home/pi/opt/rpisurv/cec_gost.py)</key-->
+	</keyboard>
+    </global>
+  <FullscreenLiveTV>
+	  <keyboard>
+		<left>PreviousChannelGroup</left>
+		<right>NextChannelGroup</right>
+		<up>ChannelUp</up>
+		<down>ChannelDown</down>
+		<menu>ActivateWindow(TvChannels)</menu>
+		<home>Number1</home>
+		<key id="61622">Number1</key>
+		<key id="61622" mod="longpress">Number1</key>
+		<!--escape>ActivateWindow(TvChannels)</escape>
+		<power>CECToggleState</power>
+		<key id="61663">CECToggleState</key-->
+	</keyboard>
+   </FullscreenLiveTV>
+  <FullscreenVideo>
+	  <keyboard>
+		<left>ChannelDown</left>
+		<right>ChannelUp</right>
+		<up>ChannelUp</up>
+		<down>ChannelDown</down>
+		<menu>ActivateWindow(TvChannels)</menu>
+		<home>Number1</home>
+		<!--home mod="longpress">Number1</home-->
+		<key id="61622" mod="longpress">Number1</key>
+		<key id="61622">Number1</key>
+		<!--escape>ActivateWindow(TvChannels)</escape>
+		<power>CECToggleState</power>
+		<key id="61663">CECToggleState</key-->
+	</keyboard>
+   </FullscreenVideo>
+    <TvChannels>
+	<keyboard>
+	    <menu>ActivateWindow(fullscreenvideo)</menu>
+		<key id="0xf0d8">activatewindow(fullscreenvideo)</key>
+		<!--power>CECStandby</power-->
+		<!--power mod="longpress">ActivateWindow(ShutdownMenu)</power-->
+		<!--key id="61663"  mod="longpress">CECStandby</key-->
+		<!--key id="61663">CECStandby</key-->
+		<!--key id="61663" mod="longpress">CECStandby</key-->
+		<enter mod="longpress">ActivateWindow(FullScreenVideo)</enter>
+		<!--sleep mod="longpress">CECStandby</sleep>
+		<sleep>CECActivateSource</sleep-->
+	</keyboard>
+    </TvChannels>
+</keymap>
