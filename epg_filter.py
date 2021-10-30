@@ -1,4 +1,3 @@
-import xml.etree.ElementTree as ET
 from datetime import datetime
 import sys
 
@@ -22,23 +21,13 @@ visible_channels = ['inter', 'inter-plus-ua', '1-plus-1', '5kanal-ukraina', 'per
 if __name__ == '__main__':
     today = datetime.today().strftime("%Y%m%d")
 
-    tree = ET.parse(sys.stdin)
-    newTree = ET.Element("tv")
-    newTree.set('generator-info-name', 'cbilling.tv EPG')
-    root = tree.getroot()
-    channels = tree.findall('/channel')
-    for element in channels:
-        if element.get('id') in visible_channels:
-            newTree.append(element)
-
-    count = {}
-    programs = tree.findall('/programme')
-    for program in programs:
-        channel = program.get('channel')
-        curr = count.get(channel, 0)
-        # if channel in visible_channels and program.get('start').startswith(today):
-        if program.get('start').startswith(today):
-            count[channel] = curr + 1
-            newTree.append(program)
-
-    ET.ElementTree(newTree).write(sys.stdout.buffer, encoding='UTF-8')
+    COPY = 0
+    SKIP = 1
+    state = COPY
+    for line in sys.stdin:
+        if state == COPY and line.find("<programme") >= 0 and line.find(today) == -1:
+            state = SKIP
+        elif state == SKIP and line.find("</programme>") >= 0:
+            state = COPY
+        elif state == COPY:
+            sys.stdout.write(line)
