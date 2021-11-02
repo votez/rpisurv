@@ -20,12 +20,13 @@ visible_channels = ['inter', 'inter-plus-ua', '1-plus-1', '5kanal-ukraina', 'per
                     'zdorovoe-tv', 'voprosy-otvety', 'zhivi', 'mama', 'domashnije-zhivotnye', '1nezalegny-ua']
 if __name__ == '__main__':
     today = datetime.today().strftime("%Y%m%d")
+    tomorrow = (datetime.date.today() + datetime.timedelta(days=1)).strftime("%Y%m%d")
 
     COPY = 0
     SKIP = 1
     state = COPY
     for line in sys.stdin:
-        if state == COPY and line.find("<programme") >= 0 and line.find(today) == -1:
+        if state == COPY and line.find("<programme") >= 0 and not (line.find(today) != -1 or line.find(tomorrow) != -1):
             state = SKIP
         elif state == SKIP and line.find("</programme>") >= 0:
             state = COPY
