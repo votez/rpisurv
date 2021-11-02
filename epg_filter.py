@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 import sys
 
 visible_channels = ['inter', 'inter-plus-ua', '1-plus-1', '5kanal-ukraina', 'pervyj', 'moya-planeta',
@@ -20,7 +20,7 @@ visible_channels = ['inter', 'inter-plus-ua', '1-plus-1', '5kanal-ukraina', 'per
                     'zdorovoe-tv', 'voprosy-otvety', 'zhivi', 'mama', 'domashnije-zhivotnye', '1nezalegny-ua']
 if __name__ == '__main__':
     today = datetime.today().strftime("%Y%m%d")
-    tomorrow = (datetime.date.today() + datetime.timedelta(days=1)).strftime("%Y%m%d")
+    tomorrow = (datetime.today() + timedelta(days=1)).strftime("%Y%m%d")
 
     COPY = 0
     SKIP = 1
