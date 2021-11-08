@@ -10,13 +10,13 @@
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<control type="group">
 				<include>OpenClose_Left</include>
-				<control type="list" id="50">
+				<control type="fixedlist" id="50">
 					<left>0</left>
 					<top>list_y_offset</top>
 					<!--right>918</right-->
 					<bottom>list_y_offset</bottom>
 					<movement>3</movement>
-					<focusposition>5</focusposition>
+					<focusposition>3</focusposition>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<orientation>vertical</orientation>
 					<onleft>9000</onleft>
@@ -78,7 +78,7 @@
 							<right>120</right>
 							<aligny>top</aligny>
 							<!--font>font12</font-->
-							<font>font45</font>
+							<font>font52_title</font>
 							<label>$INFO[ListItem.Title]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
@@ -137,7 +137,7 @@
 							<height>50</height>
 							<right>120</right>
 							<aligny>bottom</aligny>
-							<font>font45</font>
+							<font>font52_title</font>
 							<label>$INFO[ListItem.Title]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 							<textcolor>grey</textcolor>
