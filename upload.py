@@ -140,18 +140,6 @@ def main():
 
     if is_different or args.get("force"):
         print("Changes detected")
-        cv2.imwrite('/var/ramdisk/contour.jpg', test)
-        file_metadata = {
-            'name': datetime.now().strftime("contour_%Y%m%d-%H%M.jpg"),
-            'parents': [debugFolder]
-        }
-        media = MediaFileUpload('/var/ramdisk/contour.jpg',
-                                mimetype='image/jpeg',
-                                resumable=False)
-        file = service.files().create(body=file_metadata,
-                                      media_body=media,
-                                      fields='id').execute()
-        print(f"Uploaded debug {file}")
         file_metadata = {
             'name': datetime.now().strftime("%Y%m%d-%H%M.jpg"),
             'parents': [changesFolder]
@@ -179,20 +167,6 @@ def main():
     service.files().create(body=file_metadata,
                            media_body=media,
                            fields='id').execute()
-
-    test = imutils.resize(test, width=SCALE)
-    cv2.imwrite('/var/ramdisk/small_contour.jpg', test)
-    file_metadata = {
-        'name': datetime.now().strftime("small_contour_%Y%m%d-%H%M.jpg"),
-        'parents': [rpiFolder]
-    }
-    media = MediaFileUpload('/var/ramdisk/small_contour.jpg',
-                            mimetype='image/jpeg',
-                            resumable=False)
-    file = service.files().create(body=file_metadata,
-                                  media_body=media,
-                                  fields='id').execute()
-    print(f"Uploaded small debug {file}")
 
     os.rename(r'/var/ramdisk/image.jpg', r'/var/ramdisk/previous.jpg')
 
