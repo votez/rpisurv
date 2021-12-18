@@ -1,0 +1,403 @@
+#EXTM3U url-tvg="http://epg.iptvx.tv/xmltv.xml.gz" catchup-type="shift"
+#EXTINF:0 group-title="Украина" tvg-id="inter" tvg-logo="http://pics.cbilling.pw/streams/inter.png" tvg-rec="7",Интер
+#EXTGRP:Украина
+http://s02.iptvx.tv:8090/s/1e1c447b/inter.m3u8
+#EXTINF:0 group-title="Украина" tvg-id="inter-plus-ua" tvg-logo="http://pics.cbilling.pw/streams/inter-plus-ua.png" tvg-rec="7",Интер+
+#EXTGRP:Украина
+http://s02.iptvx.tv:8090/s/1e1c447b/inter-plus-ua.m3u8
+#EXTINF:0 group-title="Украина" tvg-id="1-plus-1" tvg-logo="http://pics.cbilling.pw/streams/1-plus-1.png" tvg-rec="7",1+1
+#EXTGRP:Украина
+http://s02.iptvx.tv:8090/s/1e1c447b/1-plus-1.m3u8
+#EXTINF:0 group-title="Украина" tvg-id="5kanal-ukraina" tvg-logo="http://pics.cbilling.pw/streams/5kanal-ukraina.png" tvg-rec="7",5 канал HD UA
+#EXTGRP:Украина
+http://s02.iptvx.tv:8090/s/1e1c447b/5kanal-ukraina.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="pervyj" tvg-logo="http://pics.cbilling.pw/streams/pervyj.png" tvg-rec="7",Первый канал
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/pervyj.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="moya-planeta" tvg-logo="http://pics.cbilling.pw/streams/moya-planeta.png" tvg-rec="7",Моя планета
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/moya-planeta.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="national-geographic" tvg-logo="http://pics.cbilling.pw/streams/national-geographic.png" tvg-rec="7",National Geographic
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/national-geographic.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="usadba" tvg-logo="http://pics.cbilling.pw/streams/usadba.png" tvg-rec="7",Усадьба
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/usadba.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="animal-planet" tvg-logo="http://pics.cbilling.pw/streams/animal-planet.png" tvg-rec="7",Animal planet
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/animal-planet.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="rt-doc" tvg-logo="http://pics.cbilling.pw/streams/rt-doc.png" tvg-rec="7",RT Док
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/rt-doc.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="rossija-k" tvg-logo="http://pics.cbilling.pw/streams/rossija-k.png" tvg-rec="7",Россия Культура
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/rossija-k.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="domashnij" tvg-logo="http://pics.cbilling.pw/streams/domashnij.png" tvg-rec="7",Домашний
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/domashnij.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="ntv-mir" tvg-logo="http://pics.cbilling.pw/streams/ntv-mir.png" tvg-rec="7",НТВ Мир
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/ntv-mir.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="ntv" tvg-logo="http://pics.cbilling.pw/streams/ntv.png" tvg-rec="7",НТВ
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/ntv.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="dozhd" tvg-logo="http://pics.cbilling.pw/streams/dozhd.png" tvg-rec="7",Дождь
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/dozhd.m3u8
+#EXTINF:0 group-title="Украина" tvg-id="24tv-ua" tvg-logo="http://pics.cbilling.pw/streams/24tv-ua.png" tvg-rec="0",24 Канал
+#EXTGRP:Украина
+http://s02.iptvx.tv:8090/s/1e1c447b/24tv-ua.m3u8
+#EXTINF:0 group-title="Украина" tvg-id="kanal-nash" tvg-logo="http://pics.cbilling.pw/streams/kanal-nash.png" tvg-rec="7",Наш
+#EXTGRP:Украина
+http://s02.iptvx.tv:8090/s/1e1c447b/kanal-nash.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="travel-adventure" tvg-logo="http://pics.cbilling.pw/streams/travel-adventure.png" tvg-rec="7",Travel+Adventure
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/travel-adventure.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="nat-geo-wild" tvg-logo="http://pics.cbilling.pw/streams/nat-geo-wild.png" tvg-rec="7",Nat Geo Wild
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/nat-geo-wild.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="viasat-nature" tvg-logo="http://pics.cbilling.pw/streams/viasat-nature.png" tvg-rec="7",Viasat Nature
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/viasat-nature.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="zhivaya-planeta" tvg-logo="http://pics.cbilling.pw/streams/zhivaya-planeta.png" tvg-rec="7",Живая Планета
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/zhivaya-planeta.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="teleputeshestvija" tvg-logo="http://pics.cbilling.pw/streams/teleputeshestvija.png" tvg-rec="7",Телепутешествия
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/teleputeshestvija.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="travel-channel" tvg-logo="http://pics.cbilling.pw/streams/travel-channel.png" tvg-rec="7",Travel Channel
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/travel-channel.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="morskoj" tvg-logo="http://pics.cbilling.pw/streams/morskoj.png" tvg-rec="7",Моя Стихия
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/morskoj.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="history" tvg-logo="http://pics.cbilling.pw/streams/history.png" tvg-rec="7",History
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/history.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="viasat-history" tvg-logo="http://pics.cbilling.pw/streams/viasat-history.png" tvg-rec="7",Viasat History
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/viasat-history.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="istorija" tvg-logo="http://pics.cbilling.pw/streams/istorija.png" tvg-rec="7",История
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/istorija.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="TNT" tvg-logo="http://pics.cbilling.pw/streams/TNT.png" tvg-rec="7",ТНТ
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/TNT.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="tnt-4" tvg-logo="http://pics.cbilling.pw/streams/tnt-4.png" tvg-rec="7",ТНТ4
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/tnt-4.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="CTC" tvg-logo="http://pics.cbilling.pw/streams/CTC.png" tvg-rec="7",СТС
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/CTC.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="tv-3" tvg-logo="http://pics.cbilling.pw/streams/tv-3.png" tvg-rec="7",ТВ3
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/tv-3.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="4e" tvg-logo="http://pics.cbilling.pw/streams/4e.png" tvg-rec="7",Че
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/4e.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="tvc" tvg-logo="http://pics.cbilling.pw/streams/tvc.png" tvg-rec="7",ТВЦ
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/tvc.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="5kanal" tvg-logo="http://pics.cbilling.pw/streams/5kanal.png" tvg-rec="7",5 канал
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/5kanal.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="souz" tvg-logo="http://pics.cbilling.pw/streams/souz.png" tvg-rec="7",Союз
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/souz.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="krasnaja-linija" tvg-logo="http://pics.cbilling.pw/streams/krasnaja-linija.png" tvg-rec="7",Красная линия
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/krasnaja-linija.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="8-kanal" tvg-logo="http://pics.cbilling.pw/streams/8-kanal.png" tvg-rec="7",8 канал
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/8-kanal.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="9-kanal" tvg-logo="http://pics.cbilling.pw/streams/9-kanal.png" tvg-rec="7",9 Канал
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/9-kanal.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="otp" tvg-logo="http://pics.cbilling.pw/streams/otp.png" tvg-rec="7",ОТР
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/otp.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="mir" tvg-logo="http://pics.cbilling.pw/streams/mir.png" tvg-rec="7",Мир
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/mir.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="mir-24" tvg-logo="http://pics.cbilling.pw/streams/mir-24.png" tvg-rec="7",Мир 24
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/mir-24.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="sarafan" tvg-logo="http://pics.cbilling.pw/streams/sarafan.png" tvg-rec="7",Сарафан
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/sarafan.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="kvn-tv" tvg-logo="http://pics.cbilling.pw/streams/kvn-tv.png" tvg-rec="7",КВН ТВ
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/kvn-tv.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="piatnica" tvg-logo="http://pics.cbilling.pw/streams/piatnica.png" tvg-rec="7",Пятница
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/piatnica.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="super" tvg-logo="http://pics.cbilling.pw/streams/super.png" tvg-rec="7",Суббота
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/super.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="podmoskovje" tvg-logo="http://pics.cbilling.pw/streams/podmoskovje.png" tvg-rec="7",Телеканал 360
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/podmoskovje.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="yu-tv" tvg-logo="http://pics.cbilling.pw/streams/yu-tv.png" tvg-rec="7",Ю ТВ
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/yu-tv.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="vremya" tvg-logo="http://pics.cbilling.pw/streams/vremya.png" tvg-rec="7",Время
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/vremya.m3u8
+#EXTINF:0 group-title="Общероссийские" tvg-id="rtvi" tvg-logo="http://pics.cbilling.pw/streams/rtvi.png" tvg-rec="7",RTVi
+#EXTGRP:Общероссийские
+http://s02.iptvx.tv:8090/s/1e1c447b/rtvi.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="kinohit" tvg-logo="http://pics.cbilling.pw/streams/kinohit.png" tvg-rec="7",Кинохит
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/kinohit.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="kinomix" tvg-logo="http://pics.cbilling.pw/streams/kinomix.png" tvg-rec="7",Киномикс
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/kinomix.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="kinosemja" tvg-logo="http://pics.cbilling.pw/streams/kinosemja.png" tvg-rec="7",Киносемья
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/kinosemja.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="kinosvidanije" tvg-logo="http://pics.cbilling.pw/streams/kinosvidanije.png" tvg-rec="7",Киносвидание
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/kinosvidanije.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="mnogo-tv" tvg-logo="http://pics.cbilling.pw/streams/mnogo-tv.png" tvg-rec="7",Киносерия
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/mnogo-tv.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="kinopokaz" tvg-logo="http://pics.cbilling.pw/streams/kinopokaz.png" tvg-rec="7",Кинопоказ
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/kinopokaz.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="tv1000" tvg-logo="http://pics.cbilling.pw/streams/tv1000.png" tvg-rec="7",TV1000
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/tv1000.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="tv1000-action" tvg-logo="http://pics.cbilling.pw/streams/tv1000-action.png" tvg-rec="7",TV1000 Action
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/tv1000-action.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="tv1000-ru-kino" tvg-logo="http://pics.cbilling.pw/streams/tv1000-ru-kino.png" tvg-rec="7",TV1000 Русское Кино
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/tv1000-ru-kino.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="tv1000-world-kino" tvg-logo="http://pics.cbilling.pw/streams/tv1000-world-kino.png" tvg-rec="7",TV1000 World Kino
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/tv1000-world-kino.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="cinema" tvg-logo="http://pics.cbilling.pw/streams/cinema.png" tvg-rec="7",Cinema
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/cinema.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="kino-tv" tvg-logo="http://pics.cbilling.pw/streams/kino-tv.png" tvg-rec="7",Кино ТВ
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/kino-tv.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="evrokino" tvg-logo="http://pics.cbilling.pw/streams/evrokino.png" tvg-rec="7",Еврокино
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/evrokino.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="flix-snip" tvg-logo="http://pics.cbilling.pw/streams/flix-snip.png" tvg-rec="7",Flix Snip
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/flix-snip.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="egoist-tv" tvg-logo="http://pics.cbilling.pw/streams/egoist-tv.png" tvg-rec="7",SHOT TV
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/egoist-tv.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="muzhskoe-kino" tvg-logo="http://pics.cbilling.pw/streams/muzhskoe-kino.png" tvg-rec="7",Мужское кино
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/muzhskoe-kino.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="hct" tvg-logo="http://pics.cbilling.pw/streams/hct.png" tvg-rec="7",НСТ
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/hct.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="russkaja-comedija" tvg-logo="http://pics.cbilling.pw/streams/russkaja-comedija.png" tvg-rec="7",Комедия
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/russkaja-comedija.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="kinokomedia" tvg-logo="http://pics.cbilling.pw/streams/kinokomedia.png" tvg-rec="7",Кинокомедия
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/kinokomedia.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="amedia-premium" tvg-logo="http://pics.cbilling.pw/streams/amedia-premium.png" tvg-rec="7",Amedia Premium
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/amedia-premium.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="amedia-hit" tvg-logo="http://pics.cbilling.pw/streams/amedia-hit.png" tvg-rec="7",Amedia Hit
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/amedia-hit.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="amedia-1" tvg-logo="http://pics.cbilling.pw/streams/amedia-1.png" tvg-rec="7",A1
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/amedia-1.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="amedia-2" tvg-logo="http://pics.cbilling.pw/streams/amedia-2.png" tvg-rec="7",A2
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/amedia-2.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="amc" tvg-logo="http://pics.cbilling.pw/streams/amc.png" tvg-rec="7",AMC
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/amc.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="fox" tvg-logo="http://pics.cbilling.pw/streams/fox.png" tvg-rec="7",FOX
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/fox.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="fox-life" tvg-logo="http://pics.cbilling.pw/streams/fox-life.png" tvg-rec="7",Fox Life
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/fox-life.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="paramount-channel" tvg-logo="http://pics.cbilling.pw/streams/paramount-channel.png" tvg-rec="7",Paramount Channel
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/paramount-channel.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="paramount-comedy" tvg-logo="http://pics.cbilling.pw/streams/paramount-comedy.png" tvg-rec="7",Paramount Comedy
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/paramount-comedy.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="set" tvg-logo="http://pics.cbilling.pw/streams/set.png" tvg-rec="7",Red
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/set.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="sony-sci-fi" tvg-logo="http://pics.cbilling.pw/streams/sony-sci-fi.png" tvg-rec="7",Sci-Fi
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/sony-sci-fi.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="sony-turbo" tvg-logo="http://pics.cbilling.pw/streams/sony-turbo.png" tvg-rec="7",Black
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/sony-turbo.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="tv-xxi" tvg-logo="http://pics.cbilling.pw/streams/tv-xxi.png" tvg-rec="7",TV XXI
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/tv-xxi.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="mosfilm" tvg-logo="http://pics.cbilling.pw/streams/mosfilm.png" tvg-rec="7",Мосфильм
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/mosfilm.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="lubimoe-kino" tvg-logo="http://pics.cbilling.pw/streams/lubimoe-kino.png" tvg-rec="7",Любимое Кино
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/lubimoe-kino.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="rodnoje_kino" tvg-logo="http://pics.cbilling.pw/streams/rodnoje_kino.png" tvg-rec="7",Родное кино
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/rodnoje_kino.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="pobeda" tvg-logo="http://pics.cbilling.pw/streams/pobeda.png" tvg-rec="7",Победа
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/pobeda.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="nashe-novoe-kino" tvg-logo="http://pics.cbilling.pw/streams/nashe-novoe-kino.png" tvg-rec="7",Наше новое кино
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/nashe-novoe-kino.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="russkij-bestseller" tvg-logo="http://pics.cbilling.pw/streams/russkij-bestseller.png" tvg-rec="7",Русский Бестселлер
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/russkij-bestseller.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="dom-kino" tvg-logo="http://pics.cbilling.pw/streams/dom-kino.png" tvg-rec="7",Дом Кино
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/dom-kino.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="russkij-roman" tvg-logo="http://pics.cbilling.pw/streams/russkij-roman.png" tvg-rec="7",Русский Роман
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/russkij-roman.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="russkij-detektiv" tvg-logo="http://pics.cbilling.pw/streams/russkij-detektiv.png" tvg-rec="7",Русский Детектив
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/russkij-detektiv.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="russkij-iluzion" tvg-logo="http://pics.cbilling.pw/streams/russkij-iluzion.png" tvg-rec="7",Русский Иллюзион
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/russkij-iluzion.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="iluzion-plus" tvg-logo="http://pics.cbilling.pw/streams/iluzion-plus.png" tvg-rec="7",Иллюзион +
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/iluzion-plus.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="feniks-plus-kino" tvg-logo="http://pics.cbilling.pw/streams/feniks-plus-kino.png" tvg-rec="7",Феникс+Кино
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/feniks-plus-kino.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="mir-seriala" tvg-logo="http://pics.cbilling.pw/streams/mir-seriala.png" tvg-rec="7",Мир Сериала
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/mir-seriala.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="ntv-hit" tvg-logo="http://pics.cbilling.pw/streams/ntv-hit.png" tvg-rec="7",НТВ Хит
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/ntv-hit.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="ntv-serial" tvg-logo="http://pics.cbilling.pw/streams/ntv-serial.png" tvg-rec="7",НТВ Сериал
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/ntv-serial.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="nostalgia" tvg-logo="http://pics.cbilling.pw/streams/nostalgia.png" tvg-rec="7",Ностальгия
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/nostalgia.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="retro" tvg-logo="http://pics.cbilling.pw/streams/retro.png" tvg-rec="7",Ретро ТВ
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/retro.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="indija-tv" tvg-logo="http://pics.cbilling.pw/streams/indija-tv.png" tvg-rec="7",Индийское Кино
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/indija-tv.m3u8
+#EXTINF:0 group-title="Кино" tvg-id="zee-tv" tvg-logo="http://pics.cbilling.pw/streams/zee-tv.png" tvg-rec="7",Zee TV
+#EXTGRP:Кино
+http://s02.iptvx.tv:8090/s/1e1c447b/zee-tv.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="discovery" tvg-logo="http://pics.cbilling.pw/streams/discovery.png" tvg-rec="7",Discovery Channel
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/discovery.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="discovery-science" tvg-logo="http://pics.cbilling.pw/streams/discovery-science.png" tvg-rec="7",Discovery Science
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/discovery-science.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="dtx" tvg-logo="http://pics.cbilling.pw/streams/dtx.png" tvg-rec="7",DTX
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/dtx.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="id-xtra" tvg-logo="http://pics.cbilling.pw/streams/id-xtra.png" tvg-rec="7",Investigation Discovery
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/id-xtra.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="tlc" tvg-logo="http://pics.cbilling.pw/streams/tlc.png" tvg-rec="7",TLC
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/tlc.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="viasat-explorer" tvg-logo="http://pics.cbilling.pw/streams/viasat-explorer.png" tvg-rec="7",Viasat Explore
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/viasat-explorer.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="nasha-tema" tvg-logo="http://pics.cbilling.pw/streams/nasha-tema.png" tvg-rec="7",Наша Тема
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/nasha-tema.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="rtg-tv" tvg-logo="http://pics.cbilling.pw/streams/rtg-tv.png" tvg-rec="7",RTG
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/rtg-tv.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="ocean-tv" tvg-logo="http://pics.cbilling.pw/streams/ocean-tv.png" tvg-rec="7",Ocean-TV
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/ocean-tv.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="zoopark" tvg-logo="http://pics.cbilling.pw/streams/zoopark.png" tvg-rec="7",Зоопарк
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/zoopark.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="nauka-20" tvg-logo="http://pics.cbilling.pw/streams/nauka-20.png" tvg-rec="7",Наука
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/nauka-20.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="t24" tvg-logo="http://pics.cbilling.pw/streams/t24.png" tvg-rec="7",Техно 24
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/t24.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="da-vinci-learning" tvg-logo="http://pics.cbilling.pw/streams/da-vinci-learning.png" tvg-rec="7",Da Vinci
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/da-vinci-learning.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="365-dnej" tvg-logo="http://pics.cbilling.pw/streams/365-dnej.png" tvg-rec="7",365 Дней
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/365-dnej.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="kto-est-kto" tvg-logo="http://pics.cbilling.pw/streams/kto-est-kto.png" tvg-rec="7",Кто есть кто
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/kto-est-kto.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="teatr-tv" tvg-logo="http://pics.cbilling.pw/streams/teatr-tv.png" tvg-rec="7",Театр
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/teatr-tv.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="psihologija-21" tvg-logo="http://pics.cbilling.pw/streams/psihologija-21.png" tvg-rec="7",Психология
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/psihologija-21.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="zdorovoe-tv" tvg-logo="http://pics.cbilling.pw/streams/zdorovoe-tv.png" tvg-rec="7",Доктор
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/zdorovoe-tv.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="voprosy-otvety" tvg-logo="http://pics.cbilling.pw/streams/voprosy-otvety.png" tvg-rec="7",Вопросы и ответы
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/voprosy-otvety.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="zhivi" tvg-logo="http://pics.cbilling.pw/streams/zhivi.png" tvg-rec="7",Живи
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/zhivi.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="mama" tvg-logo="http://pics.cbilling.pw/streams/mama.png" tvg-rec="7",Мама
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/mama.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="domashnije-zhivotnye" tvg-logo="http://pics.cbilling.pw/streams/domashnije-zhivotnye.png" tvg-rec="7",Домашние животные
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/domashnije-zhivotnye.m3u8
+#EXTINF:0 group-title="Познавательные" tvg-id="tnomer" tvg-logo="http://pics.cbilling.pw/streams/tnomer.png" tvg-rec="7",Тномер
+#EXTGRP:Познавательные
+http://s02.iptvx.tv:8090/s/1e1c447b/tnomer.m3u8
+#EXTINF:0 group-title="Украина" tvg-id="1nezalegny-ua" tvg-logo="http://pics.cbilling.pw/streams/1nezalegny-ua.png" tvg-rec="7",Перший Незалежний
+#EXTGRP:Украина
+http://s02.iptvx.tv:8090/s/1e1c447b/1nezalegny-ua.m3u8
+#EXTINF:0 group-title="Украина" tvg-id="chptv-ua" tvg-logo="http://pics.cbilling.pw/streams/chptv-ua.png" tvg-rec="7",ЧП Info
+#EXTGRP:Украина
+http://s02.iptvx.tv:8090/s/1e1c447b/chptv-ua.m3u8
+#EXTINF:0 group-title="Украина" tvg-id="ntn" tvg-logo="http://pics.cbilling.pw/streams/ntn.png" tvg-rec="7",НТН
+#EXTGRP:Украина
+http://s02.iptvx.tv:8090/s/1e1c447b/ntn.m3u8
+#EXTINF:0 group-title="Украина" tvg-id="tet" tvg-logo="http://pics.cbilling.pw/streams/tet.png" tvg-rec="7",ТЕТ
+#EXTGRP:Украина
+http://s02.iptvx.tv:8090/s/1e1c447b/tet.m3u8
+#EXTINF:0 group-title="Украина" tvg-id="plus-plus" tvg-logo="http://pics.cbilling.pw/streams/plus-plus.png" tvg-rec="7",Eспресо TV
+#EXTGRP:Украина
+http://s02.iptvx.tv:8090/s/1e1c447b/plus-plus.m3u8
+#EXTINF:0 group-title="Украина" tvg-id="tonis-ua" tvg-logo="http://pics.cbilling.pw/streams/tonis-ua.png" tvg-rec="7",Прямий
+#EXTGRP:Украина
+http://s02.iptvx.tv:8090/s/1e1c447b/tonis-ua.m3u8
+#EXTINF:0 group-title="Украина" tvg-id="dom-ua" tvg-logo="http://pics.cbilling.pw/streams/dom-ua.png" tvg-rec="7",Дом
+#EXTGRP:Украина
+http://s02.iptvx.tv:8090/s/1e1c447b/dom-ua.m3u8
+#EXTINF:0 group-title="Украина" tvg-id="k1-ua" tvg-logo="http://pics.cbilling.pw/streams/k1-ua.png" tvg-rec="7",K1
+#EXTGRP:Украина
+http://s02.iptvx.tv:8090/s/1e1c447b/k1-ua.m3u8
+#EXTINF:0 group-title="Украина" tvg-id="k2-ua" tvg-logo="http://pics.cbilling.pw/streams/k2-ua.png" tvg-rec="7",K2
+#EXTGRP:Украина
+http://s02.iptvx.tv:8090/s/1e1c447b/k2-ua.m3u8
+#EXTINF:0 group-title="Украина" tvg-id="kvartal-tv-ua" tvg-logo="http://pics.cbilling.pw/streams/kvartal-tv-ua.png" tvg-rec="7",Квартал ТВ
+#EXTGRP:Украина
+http://s02.iptvx.tv:8090/s/1e1c447b/kvartal-tv-ua.m3u8
+#EXTINF:0 group-title="Украина" tvg-id="pervyj-national-ua" tvg-logo="http://pics.cbilling.pw/streams/pervyj-national-ua.png" tvg-rec="7",Перший Національний
+#EXTGRP:Украина
+http://s02.iptvx.tv:8090/s/1e1c447b/pervyj-national-ua.m3u8
