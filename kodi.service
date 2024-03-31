@@ -5,6 +5,7 @@ After = network-online.target
 Wants = network-online.target
 
 [Service]
+ExecStartPre=/bin/sh -c 'until ping -c1 google.com; do sleep 1; done;host azu6x452s3.execute-api.eu-central-1.amazonaws.com'
 Type=simple
 Restart=on-abort
 RestartSec=10
