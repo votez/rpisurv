@@ -104,15 +104,18 @@ def main():
     # If there are no (valid) credentials available, let the user log in.
     if not credentials or not credentials.valid:
         if credentials and credentials.expired and credentials.refresh_token:
+            print("Refresh token")
             credentials.refresh(Request())
+            print("Token refreshed")
         else:
             print("Credentials not valid")
             flow = InstalledAppFlow.from_client_secrets_file(
                 'credentials.json', SCOPES)
             credentials = flow.run_local_server(port=0)
         # Save the credentials for the next run
-        with open('token.json', 'w') as token:
+        with open('/home/pi/opt/token.json', 'w') as token:
             token.write(credentials.to_json())
+            print("Update token written")
 
     service = build('drive', 'v3', credentials=credentials)
 
